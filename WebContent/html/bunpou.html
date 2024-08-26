@@ -2,6 +2,17 @@
     <head>
         <meta charset="UTF-8"/>
         <title>N3の文法</title>
+        <script>
+            function myFunction() {
+              table = document.getElementById("table-bunpou");
+              table_visibility = table.style.visibility;
+              if (table_visibility == "hidden") {
+                table.style.visibility = "visible";
+              } else {
+                table.style.visibility = "hidden";
+              }
+            }
+        </script>
     </head>
     <style>
         .table-style {
@@ -17,7 +28,8 @@
     <body>
         <h1>日本語能力試験の文法</h1>
         <p>文法のページです。</p>
-        <table class="table-style">
+        <button onclick="myFunction()">非表示と再表示</button>
+        <table id="table-bunpou" class="table-style" style="visibility:hidden">
             <colgroup>
                 <col style="width: 20%;"/>
                 <col style="width: 40%;"/>
